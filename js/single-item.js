@@ -17,14 +17,14 @@ export function createSingleItem(item, removeItem, editCompleted) {
     </button>
   `;
 
-  const checkbox = div.querySelector("input");
-  checkbox.addEventListener("change", () => {
-    editCompleted(item.id);
-  });
-
   const removeBtn = div.querySelector(".remove-btn");
   removeBtn.addEventListener("click", () => {
     removeItem(item.id);
+  });
+
+  const checkbox = div.querySelector("input");
+  checkbox.addEventListener("change", () => {
+    editCompleted(item.id);
   });
 
   return div;

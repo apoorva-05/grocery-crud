@@ -8,14 +8,16 @@ function render() {
   const itemsContainer = document.querySelector(".items");
   itemsContainer.innerHTML = "";
 
-  const itemsElements = createItems(items);
+  const itemsElements = createItems(items, removeItem, editCompleted);
   itemsContainer.appendChild(itemsElements);
 }
 
 // Remove Item
-export function removeItem(itemId) {
-  alert("Item Deleted Successfully!");
+function removeItem(itemId) {
   items = items.filter((item) => item.id !== itemId);
+
+  alert("Item Deleted Successfully!");
+
   render();
 }
 
