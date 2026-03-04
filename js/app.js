@@ -5,12 +5,27 @@ let items = groceryItems;
 
 // Render App
 function render() {
-  const app = document.getElementById("app");
-  app.innerHTML = "";
+  const itemsContainer = document.querySelector(".items");
+  itemsContainer.innerHTML = "";
 
-  const itemsElement = createItems(items);
-  app.appendChild(itemsElement);
+  const itemsElements = createItems(items);
+  itemsContainer.appendChild(itemsElements);
 }
 
-// Initialize App
+// Remove Item
+export function removeItem(itemId) {
+  alert("Item Deleted Successfully!");
+  items = items.filter((item) => item.id !== itemId);
+  render();
+}
+
+// Toggle Completed
+export function editCompleted(itemId) {
+  items = items.map((item) =>
+    item.id === itemId ? { ...item, completed: !item.completed } : item,
+  );
+  render();
+}
+
+// Initialize
 render();

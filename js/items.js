@@ -1,14 +1,12 @@
 import { createSingleItem } from "./single-item.js";
 
-// Create Items Container
 export function createItems(itemsArray) {
-  const container = document.createElement("div");
-  container.className = "items";
+  const fragment = document.createDocumentFragment();
 
   itemsArray.forEach((item) => {
     const itemElement = createSingleItem(item);
-    container.appendChild(itemElement);
+    fragment.appendChild(itemElement);
   });
 
-  return container;
+  return fragment;
 }
