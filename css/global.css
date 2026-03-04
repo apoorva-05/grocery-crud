@@ -23,3 +23,9 @@ body {
   padding: 2rem;
   position: relative;
 }
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url("../images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
