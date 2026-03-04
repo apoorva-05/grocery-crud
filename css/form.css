@@ -23,3 +23,16 @@
 #grocery-form button:hover {
   background: #0e7490;
 }
+.clear-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: darkred;
+}
